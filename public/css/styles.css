@@ -68,4 +68,49 @@ body {
   .hero p {
     font-size: 1rem;
   }
+  /* Контейнер за картите */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Изображение */
+.product-card img,
+.product-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Заглавие и описание */
+.product-card h5 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Цена */
+.product-card .fw-bold {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+/* Бутон */
+.product-card button {
+  margin-top: auto;
 }
