@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  // Hero section with background image defined in CSS
+  .hero
+    .container
+      h1.text-white.mb-3= t('heroText')
+      p.text-white.lead= t('welcomeText')
+      a.btn.btn-primary.mt-4(href='/catalog?lang=' + lang)= t('navCatalog')

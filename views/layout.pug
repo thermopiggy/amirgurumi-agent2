@@ -1,0 +1,41 @@
+doctype html
+html(lang=lang)
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title || t('brandName')
+    // Bootstrap CSS from CDN
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css', integrity='sha384-1CmrxMRARb6aLqgBO7YkQnTvsm2K+6J7zi10BGSAdoo6gWQKxn53eTr9jcig6a3P', crossorigin='anonymous')
+    link(rel='stylesheet', href='/css/styles.css')
+  body
+    // Navbar
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top
+      .container
+        a.navbar-brand(href='/?lang=' + lang)= t('brandName')
+        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+          ul.navbar-nav.me-auto.mb-2.mb-lg-0
+            li.nav-item
+              a.nav-link(class=(title === t('navHome') ? 'active' : ''), href='/?lang=' + lang)= t('navHome')
+            li.nav-item
+              a.nav-link(class=(title === t('navCatalog') ? 'active' : ''), href='/catalog?lang=' + lang)= t('navCatalog')
+            li.nav-item
+              a.nav-link(class=(title === t('navCart') ? 'active' : ''), href='/cart?lang=' + lang)= t('navCart')
+          // Language dropdown on the right
+          ul.navbar-nav
+            li.nav-item.dropdown
+              a#languageDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')= lang.toUpperCase()
+              ul.dropdown-menu.dropdown-menu-end(aria-labelledby='languageDropdown')
+                li
+                  a.dropdown-item(href='/?lang=bg') BG
+                li
+                  a.dropdown-item(href='/?lang=en') EN
+    // Main content
+    block content
+    // Footer
+    footer.footer
+      .container
+        p.mb-0= t('footerText')
+    // Bootstrap JS bundle
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js', integrity='sha384-ENjdO4Dr2bkBIFxQpeoM9A1qUzzr3MOeBjzlj/wzlhKRxU5VnLYA4uH8aXW9CLvL', crossorigin='anonymous')

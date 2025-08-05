@@ -1,0 +1,25 @@
+{
+  "brandName": "Amigurumi Shop",
+  "welcomeText": "Welcome to our handmade crochet toy shop! Each amigurumi is made with love.",
+  "navHome": "Home",
+  "navCatalog": "Catalog",
+  "navCart": "Cart",
+  "categories": {
+    "animals": "Animals",
+    "people": "People",
+    "fantasy": "Fantasy"
+  },
+  "addToCart": "Add to cart",
+  "price": "Price",
+  "description": "Description",
+  "cartTitle": "Your Cart",
+  "cartEmpty": "Your cart is empty.",
+  "remove": "Remove",
+  "total": "Total",
+  "orderWhatsApp": "Order via WhatsApp",
+  "checkoutMessageIntro": "Hello, I would like to order the following items:\n",
+  "checkoutMessageTotal": "Total: ",
+  "languageLabel": "Language",
+  "footerText": "© 2025 Amigurumi Shop. Handmade with love.",
+  "heroText": "Discover magical crochet toys!"
+}

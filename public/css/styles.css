@@ -1,0 +1,71 @@
+/* Custom styles for Amigurumi shop */
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 60px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.hero {
+  /* Hero image generated programmatically and stored in public/images */
+  background: url('/images/hero-background.png') center/cover no-repeat;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.product-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+  transition: box-shadow 0.2s;
+  height: 100%;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.cart-table th,
+.cart-table td {
+  vertical-align: middle;
+}
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}

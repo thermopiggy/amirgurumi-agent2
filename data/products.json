@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "category": "animals",
+    "image": "images/pastel-yarn.png",
+    "price": 25.0,
+    "name": {
+      "bg": "Слонче",
+      "en": "Little Elephant"
+    },
+    "description": {
+      "bg": "Ръчно изработено плетено слонче.",
+      "en": "Handmade crocheted little elephant."
+    }
+  },
+  {
+    "id": 2,
+    "category": "animals",
+    "image": "images/pastel-yarn.png",
+    "price": 18.0,
+    "name": {
+      "bg": "Меченце",
+      "en": "Teddy Bear"
+    },
+    "description": {
+      "bg": "Сладко плетено меченце.",
+      "en": "Cute crocheted teddy bear."
+    }
+  },
+  {
+    "id": 3,
+    "category": "people",
+    "image": "images/pink-yarn.png",
+    "price": 22.0,
+    "name": {
+      "bg": "Кукла Ана",
+      "en": "Doll Ana"
+    },
+    "description": {
+      "bg": "Плетена кукла с рокля.",
+      "en": "Crocheted doll with dress."
+    }
+  },
+  {
+    "id": 4,
+    "category": "people",
+    "image": "images/pink-yarn.png",
+    "price": 20.0,
+    "name": {
+      "bg": "Кукла Борис",
+      "en": "Doll Boris"
+    },
+    "description": {
+      "bg": "Плетено момче с шапка.",
+      "en": "Crocheted boy with hat."
+    }
+  },
+  {
+    "id": 5,
+    "category": "fantasy",
+    "image": "images/fantasy-yarn.png",
+    "price": 30.0,
+    "name": {
+      "bg": "Дракон",
+      "en": "Dragon"
+    },
+    "description": {
+      "bg": "Плетен дракон с криле.",
+      "en": "Crocheted dragon with wings."
+    }
+  },
+  {
+    "id": 6,
+    "category": "fantasy",
+    "image": "images/fantasy-yarn.png",
+    "price": 28.0,
+    "name": {
+      "bg": "Еднорог",
+      "en": "Unicorn"
+    },
+    "description": {
+      "bg": "Плетен еднорог в цветове.",
+      "en": "Crocheted unicorn in colors."
+    }
+  }
+]

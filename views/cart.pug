@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  .container.mt-4
+    h2.mb-3= t('cartTitle')
+    if items.length
+      table.table.cart-table
+        thead
+          tr
+            th= t('description')
+            th.text-center= t('price')
+            th.text-center Quantity
+            th.text-center= t('total')
+            th
+        tbody
+          each item in items
+            tr
+              td
+                strong= item.product.name[lang] || item.product.name.bg
+                br
+                span.text-muted.small= item.product.description[lang] || item.product.description.bg
+              td.text-center= item.product.price.toFixed(2) + ' лв.'
+              td.text-center= item.quantity
+              td.text-center= item.lineTotal.toFixed(2) + ' лв.'
+              td.text-center
+                form.d-inline(action='/remove-from-cart/' + item.product.id + '?lang=' + lang, method='POST')
+                  button.btn.btn-sm.btn-outline-danger(type='submit')= t('remove')
+      p.fw-bold.mt-3= t('total') + ': ' + total.toFixed(2) + ' лв.'
+      a.btn.btn-primary.mt-3(href=whatsappLink, target='_blank')= t('orderWhatsApp')
+    else
+      p.text-muted= t('cartEmpty')

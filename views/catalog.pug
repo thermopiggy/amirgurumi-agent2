@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .container.mt-4
+    h2.mb-3= t('navCatalog')
+    // Category filter navigation
+    ul.nav.nav-pills.mb-4
+      li.nav-item
+        a.nav-link(class=(!categoryFilter ? 'active' : ''), href='/catalog?lang=' + lang)= 'All'
+      each category in ['animals', 'people', 'fantasy']
+        li.nav-item
+          a.nav-link(class=(categoryFilter === category ? 'active' : ''), href='/catalog?category=' + category + '&lang=' + lang)= categoryNames[category]
+    // Products grid
+    if products.length
+      .row.g-4
+        each product in products
+          .col-sm-6.col-md-4
+            .product-card.d-flex.flex-column
+              img.product-image(src='/' + product.image, alt=(product.name[lang] || product.name.bg))
+              h5.mt-2= product.name[lang] || product.name.bg
+              p.flex-grow-1= product.description[lang] || product.description.bg
+              p.fw-bold.mt-2= t('price') + ': ' + product.price.toFixed(2) + ' лв.'
+              form(action='/add-to-cart/' + product.id + '?lang=' + lang, method='POST')
+                button.btn.btn-success(type='submit')= t('addToCart')
+    else
+      p.text-muted= t('cartEmpty')
